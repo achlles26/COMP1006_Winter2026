@@ -5,16 +5,15 @@ require "connect.php";
 
 //1. Code Commenting 
 
-//inline code 
+// inline comment 
 
 /* 
 
-multi-line code 
+multi-line comment 
 
 */
 
-//2. Variables, Data Types, Concatenation, Conditional Statements & Echo
-
+//2. Variables, Data Types, Concatenation & Conditional Statements
 
 $firstName = "Aquiles";
 $lastName = "Sanchez";
@@ -56,28 +55,32 @@ echo add($num1, $num2);
 //6. OOP with PHP 
 class Person {
     public string $name;
-    public int $age;
-    public bool $isInstructor;
-
-    public function __construct(string $name, int $age, bool $isInstructor){
-
-        $this->name = $name;
-        $this->age = $age;
-        $this->isIntstructor = $isInstructor;
+    public int $age; 
+    public bool $isInstructor; 
+    
+    public function __construct(string $name, int $age, bool $isInstructor) {
+        $this->name = $name; 
+        $this->age = $age; 
+        $this->isInstructor = $isInstructor;
     }
 
     public function getBadge(): string {
-
-        $role = $this->isInstructor ? "Instructor" : "Student";
-        return "Name: {$this->name} | Age: {$this->Age} Role: $role";
+        $role = $this->isInstructor ? "Instructor" : "Student"; 
+        return "Name : {$this->name} | Age: {$this->age} | Role : $role";
     }
 }
 
-//create the class 
-$person = new Person("Aquiles", 27, false);
+//create an instance of the object 
 
-echo $person->getBadge();
-//create an instance of object 
+$person = new Person("Jessica", 40, true); 
 
-//use the object 
+echo $person->getBadge(); 
+
+
+
+
+
+
+
+
 
