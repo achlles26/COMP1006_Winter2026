@@ -3,17 +3,19 @@
 declare(strict_types=1);
 
 $host = "localhost"; 
-$db = "test_connection"; 
-$user = "root"; 
-$pass = ""; 
+$db = "Week2";
+$user = "root";
+$password = "";
 
 $dsn = "mysql:host=$host;dbname=$db";
 
 try {
- $pdo = new PDO($dsn, $user, $pass); 
- $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
- echo "Connected to the database! Yay!"; 
+    $pdo = new PDO ($dsn, $user, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "<p>Connected.</p>";
+
 }
-catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
+catch(PDOException $e) {
+
+    die("Database connection Failed.". $e->getMessage());
 }
